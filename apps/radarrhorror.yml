@@ -13,12 +13,11 @@
 
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'sonarr4k'
-        intport: '8989'
-        extport: '8984'
-        image: 'linuxserver/sonarr:preview'
+        pgrole: 'radarrhorror'
+        intport: '7878'
+        extport: '7873'
+        image: 'linuxserver/radarr:preview'
 
-    # CORE (MANDATORY) ############################################################
     - name: 'Including cron job'
       include_tasks: '/opt/communityapps/apps/_core.yml'
 

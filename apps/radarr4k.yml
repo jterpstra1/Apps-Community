@@ -16,7 +16,7 @@
         pgrole: 'radarr4k'
         intport: '7878'
         extport: '7874'
-        image: 'linuxserver/radarr'
+        image: 'linuxserver/radarr:preview'
 
     - name: 'Including cron job'
       include_tasks: '/opt/communityapps/apps/_core.yml'
@@ -44,7 +44,6 @@
         pg_volumes:
           - '/etc/localtime:/etc/localtime:ro'
           - '{{path.stdout}}:{{path.stdout}}'
-          - '/mnt:/mnt'
           - '/opt/appdata/{{pgrole}}:/config'
           - '/opt/appdata/{{pgrole}}/mp4_automator:/config_mp4_automator'
           
@@ -72,3 +71,7 @@
               - '{{pgrole}}'
         state: started
         labels: '{{pg_labels}}'
+
+##PG-Community
+
+##PG-Community
