@@ -56,7 +56,6 @@
           - '/opt/appdata/{{pgrole}}:/home/apps:rw'
           - '{{path.stdout}}:{{path.stdout}}'
           - '/etc/localtime:/etc/localtime:ro'
-          - '/mnt:/mnt'
           - '/dev/shm:/dev/shm'
           - '/dev/snd:/dev/snd:rw'
           - '/dev/dri:/dev/dri:rw'
