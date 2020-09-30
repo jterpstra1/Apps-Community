@@ -12,7 +12,7 @@
     # FACTS #######################################################################
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'wikijs'
+        pgrole: 'spotweb'
         intport: '80'
         extport: '8080'
         image: 'erikdevries/spotweb'
