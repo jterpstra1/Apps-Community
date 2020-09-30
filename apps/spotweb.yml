@@ -15,7 +15,7 @@
         pgrole: 'spotweb'
         intport: '80'
         extport: '8080'
-        image: 'erikdevries/spotweb'
+        image: 'jgeusebroek/spotweb'
 
     # CORE (MANDATORY) ############################################################
     - name: 'Including cron job'
@@ -42,14 +42,21 @@
     - name: 'Setting PG Volumes'
       set_fact:
         pg_volumes:
-          - '/etc/localtime:/etc/localtime:ro'
+          - '/opt/appdata/{{pgrole}}:/config'
 
 
     - name: 'Setting PG ENV'
       set_fact:
         pg_env:
           PUID: '1000'
-          PGID: '1000'     
+          PGID: '1000'  
+          TZ: 'Europe/Amsterdam'
+          SPOTWEB_DB_TYPE: 'pdo_mysql'
+	        SPOTWEB_DB_HOST: 'mariadb' 
+	        SPOTWEB_DB_PORT: '3306' 
+	        SPOTWEB_DB_NAME: spotweb' 
+	        SPOTWEB_DB_USER: spotweb' 
+	        SPOTWEB_DB_PASS: spotweb'
 
     # MAIN DEPLOYMENT #############################################################
     - name: 'Deploying {{pgrole}}'
