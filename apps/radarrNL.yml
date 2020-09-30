@@ -13,9 +13,9 @@
 
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'radarrhorror'
+        pgrole: 'radarrNL'
         intport: '7878'
-        extport: '7873'
+        extport: '7872'
         image: 'linuxserver/radarr:nightly'
 
     - name: 'Including cron job'
