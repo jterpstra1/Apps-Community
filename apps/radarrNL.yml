@@ -16,7 +16,7 @@
         pgrole: 'radarrNL'
         intport: '7878'
         extport: '7872'
-        image: 'linuxserver/radarr:nightly'
+        image: 'hotio/radarr:musl'
 
     - name: 'Including cron job'
       include_tasks: '/opt/communityapps/apps/_core.yml'
