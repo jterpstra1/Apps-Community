@@ -44,7 +44,7 @@
         pg_volumes:
           - '/etc/localtime:/etc/localtime:ro'
           - '{{path.stdout}}:{{path.stdout}}'
-          - '/opt/appdata/{{pgrole}}:/config'
+          - '/opt/appdata/{{pgrole}}:/config/app'
           - '/opt/appdata/{{pgrole}}/mp4_automator:/config_mp4_automator'
           
     - name: 'Setting PG ENV'
