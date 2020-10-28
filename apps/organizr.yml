@@ -51,7 +51,7 @@
           PUID: '1000'
           PGID: '1000'
           fpm: 'false'
-          branch: '-master'
+          branch: 'master'
 
     # MAIN DEPLOYMENT #############################################################
     - name: 'Deploying {{pgrole}}'
